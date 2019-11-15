@@ -1,0 +1,26 @@
+<body>
+  <form>
+    <input type="text" id="username" placeholder="Username"><br>
+    <textarea rows="20" cols="20" id="msg-content"></textarea>
+    <input type="submit" value="Send-message" id="send-btn">
+  </form>
+  </body>
+  <script src="main.js">
+class Message {
+  constructor(sender, content) {
+    this.sender = sender
+    this.content = content
+  }
+}
+
+let sendBtn = document.getElementById('send-btn')
+let messageContent = document.querySelector('#msg-content')
+let username = document.getElementById("username")
+
+SendBtn.addEventListener('click' , () => {
+  let msg = new Message(username.value, messageContent.value)
+  messageContent.value = ''
+  alert("Your message was sent!")
+
+}
+</script>
